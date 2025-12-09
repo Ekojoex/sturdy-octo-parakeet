@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap'); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: DM Sans, sans-serif;
+  background-color: #F5F5F5;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+  
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* grid-auto-rows: minmax(200px, auto); */
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  border: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 9px;
+  padding: 2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-1 {
+  background-color: hsl(31, 66%, 93%);
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-1 em {
+  color: hsl(256, 67%, 59%);
+}
+
+.card-1 img {
+  margin: 20px;
+  width: 100%;
+  height: 70px;
+}
+
+.card-2 {
+  background-color: hsl(256, 67%, 59%);
+  color: hsl(0, 0%, 100%);
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-2 img {
+  width: 250px;
+  height: 70px;
+}
+
+.card-3 {
+  background-color: hsl(254, 88%, 90%);
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+  overflow: hidden;
+}
+
+.card-3 p {
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.card-3 img {
+  width: 200%;
+  margin-top: 10px;
+  height: 450px;
+}
+
+.card-4 {
+  background-color: hsl(39, 100%, 71%);
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  justify-content: space-between;
+}
+
+.card-5 {
+  background-color: hsl(0, 0%, 100%);
+  grid-column: 2 / 3;
+  grid-row: 2 / 2;
+  justify-content: space-evenly;
+}
+
+.card-6 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  background-color: hsl(39, 100%, 71%);
+}
+
+.card-7 {
+  grid-column: 2 / 3;
+  grid-row: 3 / 3;
+}
+
+.card-7 h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.card-7 img {
+  margin-top: auto;
+  justify-content: center;
+  width: 200px;
+}
+
+
+.card-8 {
+  grid-column: 3 / 5;
+  grid-row: 3 / 3;
+  color: white;
+  justify-content: space-between;
+  background-color: hsl(256, 67%, 59%);
+}
+
+.card-8 img {
+  max-width: 200px;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .card-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .card-2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  
+  .card-3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  
+  .card-4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  
+  .card-5 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  
+  .card-6 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+  
+  .card-7 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+  
+  .card-8 {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+}
+
+
+@media (max-width: 640px) {
+  body {
+    padding: 1rem;
+  }
+  
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5,
+  .card-6,
+  .card-7,
+  .card-8 {
+    grid-column: 1 / 2;
+    grid-row: auto;
+  }
+  
+  .card h1 {
+    font-size: 2rem;
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .card h3 {
+    font-size: 1.25rem;
+  }
+}
